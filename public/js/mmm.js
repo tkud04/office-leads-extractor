@@ -5,6 +5,9 @@
 	
 $(document).ready(function() {
     "use strict";
+	 hideElem(['#extract-loading','#ctr']); 
+	 
+	 
 	//xtrctr
 	$('#extract-btn').click(e => {
 		e.preventDefault();
@@ -32,8 +35,8 @@ while (found = regex.exec(paragraph)){
     //-- remove the found email and continue search if there are still emails
     paragraph = paragraph.replace(found[0],"")
 }
-			$('#result').html(JSON.stringify(rr));
-			// extract(text);
+			 hideElem(['#extract-btn','#ctr']); showElem('#extract-loading');
+			extract(JSON.stringify(rr));
 		}
 		
 			

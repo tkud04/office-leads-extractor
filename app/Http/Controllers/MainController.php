@@ -89,10 +89,10 @@ class MainController extends Controller {
 			  $em = explode('@',$i);
 			  $xx = getmxrr($em[1],$temp);
               if($xx){
-            	array_push($h,$temp);
+            	array_push($h,['em' => $i,'h' => $temp]);
               }
             }
-            $msg = json_encode($h);
+            $msg = $h;
 			$ret = ['status' => "ok",'message' => $msg];
 		 }
 		 
