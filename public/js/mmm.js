@@ -32,7 +32,7 @@ while (found = regex.exec(paragraph)){
     //-- remove the found email and continue search if there are still emails
     paragraph = paragraph.replace(found[0],"")
 }
-			$('#result').html(JSON.stringify(rr));
+			//$('#result').html(JSON.stringify(rr));
 			// extract(text);
 		}
 		
